@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="sidebar" id="sidebar">
+            <img src="pic.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Adrian Guillermo</h1>
+            <p>Student</p>
+        </div>
+        <div class="content">
+            <section>
+                <h2 class="section-title">PERSONAL DATA</h2>
+                <ul>
+                    <li><strong>Name:</strong> Adrian A. Guillermo</li>
+                    <li><strong>Date of birth:</strong> May 11, 2004</li>
+                    <li><strong>Address:</strong> 38 Faith Street, Teresa Village, QC</li>
+                    <li><strong>Phone Number:</strong> 09395510468</li>
+                    <li><strong>Gender:</strong> Male</li>
+                    <li><strong>Religion:</strong> Catholic</li>
+                    <li><strong>Country:</strong> Philippines</li>
+                    <li><strong>Email:</strong> adrianfguillermo@gmail.com</li>
+                    <li><strong>Status:</strong> Not married yet</li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="section-title">EDUCATION</h2>
+                <ul>
+                    <li>Academia De Bellarmino (2011-2016)</li>
+                    <li>Colegio De San Lorenzo (2017-2020)</li>
+                    <li>Technological Institute of The Philippines (2021-2022)</li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="section-title">SKILLS</h2>
+                <ul>
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="section-title">HOBBY</h2>
+                <ul>
+                    <li>Playing Video Games</li>
+                    <li>Eating</li>
+                    <li>Sports</li>
+                    <li>Watching Movies</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <button onclick="changeColor()">Change Color</button>
+    
+    <script>
+        function changeColor() {
+            const colors = ['#213555', '#3E5879', '#D8C4B6', '#F5EFE7'];
+            
+            let bodyColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = bodyColor;
+
+            let sidebarAndTitleColor;
+            do {
+                sidebarAndTitleColor = colors[Math.floor(Math.random() * colors.length)];
+            } while (sidebarAndTitleColor === bodyColor);
+
+            document.getElementById('sidebar').style.backgroundColor = sidebarAndTitleColor;
+            
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                title.style.color = sidebarAndTitleColor;
+                title.style.borderColor = sidebarAndTitleColor;
+            });
+        }
+    </script>
+</body>
+</html>
