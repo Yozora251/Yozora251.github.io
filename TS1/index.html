@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="resume-container">
+    <div class="resume-container" id="resume-container">
         <div class="sidebar" id="sidebar">
             <img src="pic.jpg" alt="Profile Picture" class="profile-pic">
             <h1>Adrian Guillermo</h1>
-            <p>Student</p>
+            <p>New Graduate</p>
         </div>
-        <div class="content">
+        <div class="content" id="content">
             <section>
                 <h2 class="section-title">PERSONAL DATA</h2>
                 <ul>
@@ -39,8 +39,10 @@
             <section>
                 <h2 class="section-title">SKILLS</h2>
                 <ul>
-                    <li>Web Design</li>
-                    <li>Web Development</li>
+                    <li>HTML</li>
+                    <li>C++</li>
+                    <li>Javascript</li>
+                    <li>Python</li>
                 </ul>
             </section>
             <section>
@@ -60,20 +62,26 @@
         function changeColor() {
             const colors = ['#213555', '#3E5879', '#D8C4B6', '#F5EFE7'];
             
-            let bodyColor = colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.backgroundColor = bodyColor;
-
-            let sidebarAndTitleColor;
+            let resumeColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('resume-container').style.backgroundColor = resumeColor;
+            
+            let sidebarColor;
             do {
-                sidebarAndTitleColor = colors[Math.floor(Math.random() * colors.length)];
-            } while (sidebarAndTitleColor === bodyColor);
-
-            document.getElementById('sidebar').style.backgroundColor = sidebarAndTitleColor;
+                sidebarColor = colors[Math.floor(Math.random() * colors.length)];
+            } while (sidebarColor === resumeColor);
+            document.getElementById('sidebar').style.backgroundColor = sidebarColor;
+            
+            let textColor;
+            do {
+                textColor = colors[Math.floor(Math.random() * colors.length)];
+            } while (textColor === sidebarColor || textColor === resumeColor);
+            
+            document.getElementById('content').style.color = textColor;
             
             const sectionTitles = document.querySelectorAll('.section-title');
             sectionTitles.forEach(title => {
-                title.style.color = sidebarAndTitleColor;
-                title.style.borderColor = sidebarAndTitleColor;
+                title.style.color = textColor;
+                title.style.borderColor = textColor;
             });
         }
     </script>
