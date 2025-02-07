@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #219bff2d;
     transition: background-color 0.5s;
 }
 
@@ -73,8 +73,16 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px #999;
 }
 
 button:hover {
-    background: #6197ec;
+    background: #031a3f;
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px #666;
+    background: #02102a;
 }
