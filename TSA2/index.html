@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSA2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="button-container">
+            <button id="monday" class="day-button" onclick="animateBox('#3f7a7f')">Monday</button>
+            <button id="tuesday" class="day-button" onclick="animateBox('#74a3fb')">Tuesday</button>
+            <button id="wednesday" class="day-button" onclick="animateBox('#9674fb')">Wednesday</button>
+            <button id="thursday" class="day-button" onclick="animateBox('#338037')">Thursday</button>
+            <button id="friday" class="day-button" onclick="animateBox('#fce32e')">Friday</button>
+            <button id="saturday" class="day-button" onclick="animateBox('#dd9d28')">Saturday</button>
+            <button id="sunday" class="day-button" onclick="animateBox('#dd28ba')">Sunday</button>
+        </div>
+
+        <div id="box"></div> 
+    </div>
+
+    <script>
+let isAnimating = false; 
+
+function animateBox(color) {
+        if (isAnimating) return; 
+        isAnimating = true;
+
+        let container = document.querySelector(".container");
+
+        let newBox = document.createElement("div");
+        newBox.classList.add("box");
+        newBox.style.borderColor = color;
+        newBox.style.backgroundColor = color; 
+
+        newBox.style.top = "-500px";
+        newBox.style.opacity = "0";
+
+        container.appendChild(newBox);
+
+        setTimeout(() => {
+            newBox.style.top = "200px";
+            newBox.style.opacity = "1";
+            newBox.style.backgroundColor = "transparent"; 
+        }, 50);
+
+        let oldBox = document.querySelector(".box:not(:last-child)");
+        if (oldBox) {
+            oldBox.style.top = "-1000px";
+            oldBox.style.opacity = "0";
+            oldBox.style.backgroundColor = oldBox.style.borderColor; 
+            setTimeout(() => oldBox.remove(), 500);
+        }
+
+        setTimeout(() => {
+            isAnimating = false;
+        }, 500);
+    }
+
+    </script>
+
+</body>
+</html>
