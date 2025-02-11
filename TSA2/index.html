@@ -36,28 +36,28 @@ function animateBox(color) {
         newBox.style.borderColor = color;
         newBox.style.backgroundColor = color; 
 
-        newBox.style.top = "-500px";
-        newBox.style.opacity = "0";
+        newBox.style.top = "-470px";
+        newBox.style.opacity = "500";
 
         container.appendChild(newBox);
 
         setTimeout(() => {
             newBox.style.top = "200px";
-            newBox.style.opacity = "1";
+            newBox.style.opacity = "500";
             newBox.style.backgroundColor = "transparent"; 
-        }, 50);
+        }, 10);
 
         let oldBox = document.querySelector(".box:not(:last-child)");
         if (oldBox) {
-            oldBox.style.top = "-1000px";
-            oldBox.style.opacity = "0";
+            oldBox.style.top = "-470px";
+            oldBox.style.opacity = "500";
             oldBox.style.backgroundColor = oldBox.style.borderColor; 
-            setTimeout(() => oldBox.remove(), 500);
+            setTimeout(() => oldBox.remove(), 1000);
         }
 
         setTimeout(() => {
             isAnimating = false;
-        }, 500);
+        }, 1000);
     }
 
     </script>
