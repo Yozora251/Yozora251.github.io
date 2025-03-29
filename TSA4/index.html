@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="main-menu" class="main-menu-btn">MAIN MENU</button>
+
+    <header class="header-banner">
+        <h1>Best of Merriden</h1>
+    </header>
+
+    <main>
+        <section class="restaurant-guide">
+            <h2 class="guide-title">Restaurant Guide</h2>
+            <h3 class="guide-subtitle">Produced by: Local Magazine</h3>
+
+            <div class="food-selection">
+                <div class="food-item" onclick="showDetails('gabel-loffel')">
+                    <div class="food-title">GABEL LOFFEL</div>
+                    <img src="pic1.jpg" alt="Gabel Loffel">
+                    <div class="hover-overlay">
+                        <p>Get out your Lederhosen!</p>
+                    </div>
+                </div>
+
+                <div class="food-item" onclick="showDetails('gary-gari')">
+                    <div class="food-title">GARY GARI</div>
+                    <img src="pic2.jpg" alt="Gary Gari">
+                    <div class="hover-overlay">
+                        <p>The delicious headquarters for all your ginger-related needs!</p>
+                    </div>
+                </div>
+
+                <div class="food-item" onclick="showDetails('il-piatto')">
+                    <div class="food-title">IL PIATTO</div>
+                    <img src="pic3.jpg" alt="Il Piatto">
+                    <div class="hover-overlay">
+                        <p>Authentic Italian cuisine at its finest.</p>
+                    </div>
+                </div>
+
+                <div class="food-item" onclick="showDetails('pierre-platters')">
+                    <div class="food-title">PIERRE PLATTERS</div>
+                    <img src="pic4.jpg" alt="Pierre Platters">
+                    <div class="hover-overlay">
+                        <p>Got wild finicky kids? Head for Il Piatto for kid-friendly Italian Fun!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurant-details">
+            <article class="restaurant-detail" id="gabel-loffel">
+                <div class="restaurant-left">
+                    <div class="gradient-bar">Gabel Loffel</div>
+                    <img src="pic1.jpg" alt="Gabel Loffel">
+                </div>
+                <div class="restaurant-right">
+                    <h2 class="restaurant-name">Gabel Loffel</h2>
+                    <div class="restaurant-info-meta">
+                        <div class="restaurant-info">
+                            <p><strong>235 Glendale Ave.</strong><br>MERIDIEN CITY</p>
+                            <p><strong>T:</strong> 490 49 4000</p>
+                            <p><strong>W:</strong> GANDG.RES</p>
+                        </div>
+                        <div class="restaurant-meta">
+                            <p><strong>CATEGORY:</strong> Swiss</p>
+                            <p><strong>OPEN:</strong> 10AM to 10PM</p>
+                            <p><strong>PRICE:</strong> $$$</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                    <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+                    <hr>
+                </div>
+            </article>
+
+            <article class="restaurant-detail" id="gary-gari">
+                <div class="restaurant-left">
+                    <div class="gradient-bar">Gary Gari</div>
+                    <img src="pic2.jpg" alt="Gary Gari">
+                </div>
+                <div class="restaurant-right">
+                    <h2 class="restaurant-name">Gary Gari</h2>
+                    <div class="restaurant-info-meta">
+                        <div class="restaurant-info">
+                            <p><strong>76 NO. HIGHLAND AVE.,</strong><br>MERIDIEN CITY</p>
+                            <p><strong>T:</strong> 490 24 6709</p>
+                            <p><strong>W:</strong> GANDG.RES</p>
+                        </div>
+                        <div class="restaurant-meta">
+                            <p><strong>CATEGORY:</strong> Japanese</p>
+                            <p><strong>OPEN:</strong> 5PM to 10PM</p>
+                            <p><strong>PRICE:</strong> $$</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                    <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+                    <hr>
+                </div>
+            </article>
+
+            <article class="restaurant-detail" id="il-piatto">
+                <div class="restaurant-left">
+                    <div class="gradient-bar">Il Piatto</div>
+                    <img src="pic3.jpg" alt="Il Piatto">
+                </div>
+                <div class="restaurant-right">
+                    <h2 class="restaurant-name">Il Piatto</h2>
+                    <div class="restaurant-info-meta">
+                        <div class="restaurant-info">
+                            <p><strong>1210 SHOUTOUT WAY</strong><br>MERIDIEN CITY</p>
+                            <p><strong>T:</strong> 490 42 1204</p>
+                            <p><strong>W:</strong> ILPIATTO.RES</p>
+                        </div>
+                        <div class="restaurant-meta">
+                            <p><strong>CATEGORY:</strong> Italian</p>
+                            <p><strong>OPEN:</strong> 11AM to 11PM</p>
+                            <p><strong>PRICE:</strong> $$</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                    <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+                    <hr>
+                </div>
+            </article>
+
+            <article class="restaurant-detail" id="pierre-platters">
+                <div class="restaurant-left">
+                    <div class="gradient-bar">Pierre Platters</div>
+                    <img src="pic4.jpg" alt="Pierre Platters">
+                </div>
+                <div class="restaurant-right">
+                    <h2 class="restaurant-name">Pierre Platters</h2>
+                    <div class="restaurant-info-meta">
+                        <div class="restaurant-info">
+                            <p><strong>68 8TH AVE.</strong><br>MERIDIEN CITY</p>
+                            <p><strong>T:</strong> 490 69 3080</p>
+                            <p><strong>W:</strong> PIERREP.RES</p>
+                        </div>
+                        <div class="restaurant-meta">
+                            <p><strong>CATEGORY:</strong> FUSHION</p>
+                            <p><strong>OPEN:</strong> 11AM to 11PM</p>
+                            <p><strong>PRICE:</strong> $$$</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                    <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+                    <hr>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function showDetails(restaurantId) {
+            document.querySelectorAll(".restaurant-detail").forEach(detail => {
+                detail.style.display = "none";
+            });
+
+            document.querySelector(".food-selection").style.display = "none";
+
+            document.getElementById(restaurantId).style.display = "flex";
+        }
+
+        document.getElementById("main-menu").addEventListener("click", function () {
+            document.querySelector(".food-selection").style.display = "flex";
+
+            document.querySelectorAll(".restaurant-detail").forEach(detail => {
+                detail.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>

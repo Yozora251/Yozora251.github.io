@@ -1,0 +1,272 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center/cover fixed;
+}
+
+#main-menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 20px 25px;
+    background: linear-gradient(to bottom, rgb(6, 197, 245), rgb(15, 5, 71));
+    border: none;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Alfa Slab One', cursive;
+    transition: background-color 0.3s ease-in-out;
+    letter-spacing: 1px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#main-menu:hover {
+    background: linear-gradient(to bottom, rgb(15, 5, 71), rgb(6, 197, 245));
+    font-family: 'Alfa Slab One', cursive;
+    color: #ffffff;
+    letter-spacing: 1px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-banner {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: -55px;
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px; 
+}
+
+.guide-title {
+    font-size: 120px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgb(15, 5, 71), rgb(6, 197, 245));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left; 
+    margin: 10px 0; 
+    margin-bottom: -30px;
+    font-family: 'Alfa Slab One', cursive;
+    padding-left: 20px; 
+    letter-spacing: 1px; 
+}
+
+.guide-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left; 
+    margin-left: 850px; 
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    padding: 5px;
+}
+
+.food-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.food-item {
+    position: relative;
+    width: 260px; 
+    height: 560px; 
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.food-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(6, 197, 245), rgb(15, 5, 71));
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Alfa Slab One', cursive;
+    padding: 12px 5px;
+    font-size: 18px;
+    transform: translateX(0); 
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px; 
+}
+
+.hover-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-overlay p {
+    margin: 0; 
+    padding: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    max-width: 50%; 
+    text-align: center;
+    transform: translateX(-10px); 
+}
+
+.food-item:hover .hover-overlay {
+    opacity: 1;
+}
+
+.restaurant-detail {
+    display: none;
+    flex-direction: row;
+    width: 90%;
+    background: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.restaurant-left {
+    flex: 2; 
+    max-width: 50%; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.gradient-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(to bottom, rgb(6, 197, 245), rgb(15, 5, 71));
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Alfa Slab One', cursive;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px; 
+}
+
+.restaurant-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-right: 2px solid #000000;
+}
+
+.restaurant-right {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.restaurant-name {
+    color: rgb(31, 47, 117); 
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.restaurant-info-meta {
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
+    position: relative; 
+}
+
+.restaurant-info {
+    flex: 1;
+    padding-right: 20px; 
+    position: relative;
+}
+
+.restaurant-meta {
+    flex: 1;
+    padding-left: 20px; 
+    position: relative;
+}
+
+.restaurant-info-meta::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px; 
+    height: 100%; 
+    background-color: #000; 
+}
+
+.restaurant-right hr {
+    border: none;
+    height: 2px;
+    background: #ccc; 
+    margin: 15px 0; 
+}
+
+.restaurant-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px; 
+}
+
+.restaurant-right hr {
+    border: none;
+    height: 2px;
+    background: #ccc; 
+    margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .restaurant-detail {
+        flex-direction: column;
+    }
+
+    .restaurant-left {
+        max-width: 100%;
+    }
+
+    .restaurant-left img {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+    }
+}
